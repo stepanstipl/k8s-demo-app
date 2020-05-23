@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>K8s Demo App</title>
+    <link rel="stylesheet" href="/static/picnic.min.css">
+    <link rel="stylesheet" href="/static/site.css">
+  </head>
+  <body><main class="site">
+    <article class="card">
+      <header>
+        <h2>{{ .Message }}</h2>
+      </header>
+      <footer>
+        <h3>Pod: <span class="label">{{ .Hostname }}</span></h3>
+        <h3>Cluster: <span class="label success">{{ .Cluster }}</span></h3>
+        <h3>Node: <span class="label warning">{{ .Node }}</span></h3>
+        <h3>Zone: <span class="label error">{{ .Zone }}</span></h3>
+	Received request on path <code>{{ .Path }}</code>.
+      </footer>
+    </article>
+    </main></body>
+</html>
